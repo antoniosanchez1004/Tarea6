@@ -33,6 +33,18 @@
       "(-oo < x) & (x <= 6)\n",
       "(-oo < x) & (x < 5)\n",
       "((-oo < x) & (x < -1)) | ((1 < x) & (x < oo))\n",
+      from sympy import Symbol
+from sympy.solvers.inequalities import solve_univariate_inequality
+
+x=Symbol('x')
+a=solve_univariate_inequality(x+2<=8,x)
+print(a)
+b=solve_univariate_inequality(x+(2*(4*x-5))>5*(2*x-3),x)
+print(b)
+c=solve_univariate_inequality(abs(x)>1,x)
+print(c)
+d=solve_univariate_inequality(x**2+4*x+3<=0,x)
+print(d)
       "(-3 <= x) & (x <= -1)\n"
      ]
     }
